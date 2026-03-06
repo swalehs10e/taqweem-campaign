@@ -3,10 +3,10 @@
 <head>
     <meta property="og:title" content="🌙 TAQWEEM360 Ramadan Companion">
     <meta property="og:description" content="Experience a guided Ramadan journey with reflection, duas and the TAQWEEM360 ecosystem.">
-    <meta property="og:image content"="https://taqweem-campaign.netlify.app/ramadan-preview.png">
+    <meta property="og:image" content="https://taqweem-campaign.netlify.app/ramadan-preview.png">
     <meta property="og:url" content="https://taqweem-campaign.netlify.app">
-    <meta property="og;type" content="website">
-    <meta propert="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TAQWEEM360 – Ramadan Companion</title>
@@ -440,7 +440,7 @@ box-shadow: 0 0 20px rgba(212,175,55,0.25);
 <!-- ARRIVAL -->
 <div id="arrivalScreen">
     <div>
-        <h1>"timeGreeting</h1>
+        <h1 id="timeGreeting"></h1>
         <p>Your Taqweem Moment begins.</p>
         <p class="powered">Powered by TAQWEEM360 – Your Ramadan Companion</p>
     </div>
@@ -827,13 +827,13 @@ function shareBlessing(){
 function setGreeting(){
     const hour = new Date().getHours();
     let message="";
-    if(hour<12){
+    if(hour < 12){
         message = "Good morning.";
     }
-    else if(hour<17){
+    else if(hour < 17){
         message = "Take a moment to realign.";
     }
-    else if(hour<20){
+    else if(hour < 20){
         message = "Pause and reflect.";
     }
     else{
