@@ -440,7 +440,7 @@ box-shadow: 0 0 20px rgba(212,175,55,0.25);
 <!-- ARRIVAL -->
 <div id="arrivalScreen">
     <div>
-        <h1>In the stillness of this night...</h1>
+        <h1>"timeGreeting</h1>
         <p>Your Taqweem Moment begins.</p>
         <p class="powered">Powered by TAQWEEM360 – Your Ramadan Companion</p>
     </div>
@@ -824,6 +824,24 @@ function shareBlessing(){
     "https://wa.me/?text=" + encodeURIComponent(messsage);
     window.open(url, "_blank");
 }
+function setGreeting(){
+    const hour = new Date().getHours();
+    let message="";
+    if(hour<12){
+        message = "Good morning.";
+    }
+    else if(hour<17){
+        message = "Take a moment to realign.";
+    }
+    else if(hour<20){
+        message = "Pause and reflect.";
+    }
+    else{
+        message = "In the stillness of this night...";
+    }
+    document.getElementById("timeGreeting").innerText = message
+}
+setGreeting();
 
 </script>
 <audio id="nasheed" loop>
